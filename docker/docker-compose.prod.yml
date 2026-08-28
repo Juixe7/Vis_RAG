@@ -1,0 +1,53 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: vision_rag_qdrant_prod
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_prod_storage:/qdrant/storage
+    restart: always
+    networks:
+      - vision_rag_net
+
+  backend:
+    build:
+      context: ..
+      dockerfile: app/Dockerfile
+    container_name: vision_rag_backend_prod
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - QDRANT_COLLECTION=vision_rag_docs
+      - LLM_PROVIDER=ollama
+      - LLM_BASE_URL=http://localhost:11434
+    depends_on:
+      - qdrant
+    restart: always
+    networks:
+      - vision_rag_net
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: vision_rag_frontend_prod
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - vision_rag_net
+
+volumes:
+  qdrant_prod_storage:
+
+networks:
+  vision_rag_net:
+    driver: bridge
