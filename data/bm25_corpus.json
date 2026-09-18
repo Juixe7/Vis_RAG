@@ -1,0 +1,29 @@
+[
+  {
+    "id": "doc_1",
+    "content": "Vision RAG Engine System Architecture Diagram: Microservice with FastAPI backend, Qdrant vector database, vLLM / Ollama streaming engine, and Hybrid RRF Retriever.",
+    "image_path": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs\\arch_diagram.png",
+    "metadata": {
+      "filename": "arch_diagram.txt",
+      "source_dir": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs"
+    }
+  },
+  {
+    "id": "doc_2",
+    "content": "Q3 Financial Report & Revenue Analysis: Annual recurring revenue grew by 45% YoY with an operating margin of 28% across enterprise sales.",
+    "image_path": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs\\financial_report.png",
+    "metadata": {
+      "filename": "financial_report.txt",
+      "source_dir": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs"
+    }
+  },
+  {
+    "id": "doc_3",
+    "content": "Multimodal Vision RAG Paper: Combining dense CLIP visual embeddings and sparse BM25 text keyword retrieval using Reciprocal Rank Fusion.",
+    "image_path": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs\\vision_rag_paper.png",
+    "metadata": {
+      "filename": "vision_rag_paper.txt",
+      "source_dir": "C:\\Users\\Asus\\Desktop\\ProjectsFInal\\Sasidhar\\Vison_rag\\data\\sample_docs"
+    }
+  }
+]

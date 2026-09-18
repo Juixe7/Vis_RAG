@@ -1,0 +1,1 @@
+Multimodal Vision RAG Paper: Combining dense CLIP visual embeddings and sparse BM25 text keyword retrieval using Reciprocal Rank Fusion.

@@ -1,0 +1,1 @@
+Vision RAG Engine System Architecture Diagram: Microservice with FastAPI backend, Qdrant vector database, vLLM / Ollama streaming engine, and Hybrid RRF Retriever.
